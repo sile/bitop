@@ -6,5 +6,6 @@
   :author  "Takeru Ohta"
   :description "A Common Lisp library for bitwise operations."
   :serial t
-  :components ((:file "fixbyte")))
+  :components ((:file "package")
+	       (:file "fixbyte")))
 	       

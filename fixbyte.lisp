@@ -1,17 +1,7 @@
-(defpackage :fixbyte
-  (:use :common-lisp)
-  (:export make-fixbyte
-	   fixbyte
-	   fixbyte-fixnum
-	   fixbyte-length
-	   fixbyte-reverse))
-(in-package :fixbyte)
+(in-package :bitop)
 
-(declaim (optimize (speed 3) (safety 0) (debug 0) (compilation-speed 0))
+(declaim #.*optimize*
 	 (inline fixbyte))
-
-(deftype fixnum-length () '(integer 0 #.(integer-length most-positive-fixnum)))
-
 
 (defmacro defconst-once-only (name value &optional documentation)
   `(unless (boundp ',name)
