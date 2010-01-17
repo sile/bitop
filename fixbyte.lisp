@@ -14,7 +14,8 @@
 
 (defmethod print-object ((o fixbyte) stream)
   (print-unreadable-object (o stream)
-    (format (the stream stream) "~V,'0B" (fixbyte-length o) (fixbyte-fixnum o))))
+    (unless (zerop (fixbyte-length o))
+      (format (the stream stream) "~V,'0B" (fixbyte-length o) (fixbyte-fixnum o)))))
 
 (defmethod make-load-form ((o fixbyte) &optional env)
   (declare (ignore env))

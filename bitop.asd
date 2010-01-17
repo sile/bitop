@@ -7,5 +7,6 @@
   :description "A Common Lisp library for bitwise operations."
   :serial t
   :components ((:file "package")
-	       (:file "fixbyte")))
+	       (:file "fixbyte")
+	       (:file "bit-stream")))
 	       
